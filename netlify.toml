@@ -1,0 +1,6 @@
+[build]
+  publish = "public"
+  functions = "netlify/functions"
+
+[functions."send-daily-notification"]
+  schedule = "0 18 * * *"
