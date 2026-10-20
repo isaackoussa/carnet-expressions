@@ -45,10 +45,10 @@ En plus de `NETLIFY_SITE_ID` et `NETLIFY_AUTH_TOKEN` déjà configurées, ajoute
 
 | Nom | Valeur |
 |---|---|
-| `VAPID_PUBLIC_KEY` | `BJNH5vJP0MjV49zfasQFmHZpBTxdqlJ-YYn-FXdvVlVcTNCza3vv3Y_PMPX7T3VDuVR6a5g1VlvVmida1ooC7_Q` |
-| `VAPID_PRIVATE_KEY` | `fUMY4RF2Y7u_PDg1XbcIZpYnisEc14UwicYs_j6caVQ` |
+| `VAPID_PUBLIC_KEY` | la clé publique (aussi écrite dans `public/index.html`) |
+| `VAPID_PRIVATE_KEY` | la clé privée — **secrète, ne jamais l'écrire dans le dépôt** |
 
-⚠️ Ces clés sont déjà générées et intégrées dans le code (la clé publique est aussi dans `public/index.html`). Ne les partage pas publiquement au-delà de ce projet — si tu veux en générer de nouvelles toi-même, la commande est `npx web-push generate-vapid-keys`.
+⚠️ Les clés sont stockées uniquement dans les variables d'environnement Netlify. Pour en générer de nouvelles : `npx web-push generate-vapid-keys`, puis mettre la clé publique dans Netlify **et** dans `public/index.html`.
 
 ### Comment ça marche
 
